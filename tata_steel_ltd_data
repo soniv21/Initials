@@ -1,0 +1,112 @@
+library(rvest)
+library(dplyr)
+
+### extracting whole dataset of five years 
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1633132800&period2=1664668800&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab <- html %>% html_table()
+tab <- as.data.frame(tab)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1652659200&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab1 <- html %>% html_table()
+tab1 <- as.data.frame(tab1)
+tab <- rbind(tab,tab1)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1639699200&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab2 <- html %>% html_table()
+tab2 <- as.data.frame(tab2)
+tab <- rbind(tab,tab2)
+
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1626998400&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab3 <- html %>% html_table()
+tab3 <- as.data.frame(tab3)
+tab <- rbind(tab,tab3)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1614211200&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab4 <- html %>% html_table()
+tab4 <- as.data.frame(tab4)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab4)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1601856000&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab5 <- html %>% html_table()
+tab5 <- as.data.frame(tab5)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab5)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1589500800&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab6 <- html %>% html_table()
+tab6 <- as.data.frame(tab6)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab6)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1576540800&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab7 <- html %>% html_table()
+tab7 <- as.data.frame(tab7)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab7)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1563408000&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab8 <- html %>% html_table()
+tab8 <- as.data.frame(tab8)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab8)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1550534400&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab9 <- html %>% html_table()
+tab9 <- as.data.frame(tab9)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab9)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1537747200&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab10 <- html %>% html_table()
+tab10 <- as.data.frame(tab10)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab10)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1525219200&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab11 <- html %>% html_table()
+tab11 <- as.data.frame(tab11)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab11)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1512345600&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab12 <- html %>% html_table()
+tab12 <- as.data.frame(tab12)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab12)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483315200&period2=1499817600&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab13 <- html %>% html_table()
+tab13 <- as.data.frame(tab13)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab13)
+
+html <- read_html("https://finance.yahoo.com/quote/TATASTEEL.NS/history?period1=1483228800&period2=1487030400&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+# Get the whole data as table
+tab14 <- html %>% html_table()
+tab14 <- as.data.frame(tab14)
+## combining previous (tab) dataframe with new dataframe to get new combined(tab) daatframe  
+tab <- rbind(tab,tab14)
+
+# removing some unwanted rows from combined dataframe
+tab <- tab[-c(101,202,303,404,505,606,707,808,909,1010,1111,1212,1313,1414,1445),]
+
+### whole dataset of 5 years 
+
+
