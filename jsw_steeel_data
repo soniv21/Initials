@@ -1,0 +1,83 @@
+library(rvest)
+library(dplyr)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?p=JSWSTEEL.NS")
+dat <- html %>% html_table %>%
+  as.data.frame() ##converting into dataframe
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1507075200&period2=1652745600&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat1 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat1)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1507075200&period2=1639958400&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat2 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat2)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1507075200&period2=1627257600&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat3 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat3)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1507075200&period2=1614556800&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat4 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat4)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1507075200&period2=1602028800&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat5 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat5)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1507075200&period2=1589932800&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat6 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat6)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1507075200&period2=1576800000&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat7 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat7)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1500768000&period2=1563840000&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat8 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat8)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1500768000&period2=1551052800&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat9 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat9)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1500768000&period2=1538092800&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat10 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat10)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1500768000&period2=1525824000&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat11 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat11)
+
+html <- read_html("https://finance.yahoo.com/quote/JSWSTEEL.NS/history?period1=1500768000&period2=1512950400&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true")
+dat12 <- html %>% html_table %>%
+  as.data.frame()   ##converting into dataframe
+##combining previous (dat) and newly formed dataframe
+dat <- rbind(dat,dat12)
+
+#removing some unwanted data from (tab) data frame
+dat <- dat[ -c(101,202,303,404,505,606,707,808,909,1010,1111,1212,1309),]
+
+
